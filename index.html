@@ -27,12 +27,6 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .page-section {
-            display: none;
-        }
-        .page-section.active {
-            display: block;
-        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -42,9 +36,10 @@
         <nav class="container mx-auto p-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold">Pawan Bricks Co.</h1>
             <div class="space-x-4 md:space-x-8">
-                <button class="nav-link p-2 rounded-lg hover:bg-brick-red transition-colors duration-300" data-target="home-section">Home</button>
-                <button class="nav-link p-2 rounded-lg hover:bg-brick-red transition-colors duration-300" data-target="products-section">Products</button>
-                <button class="nav-link p-2 rounded-lg hover:bg-brick-red transition-colors duration-300" data-target="contact-section">Contact</button>
+                <!-- Navigation links use standard href attributes for a multi-page site -->
+                <a href="index.html" class="p-2 rounded-lg hover:bg-brick-red transition-colors duration-300">Home</a>
+                <a href="#products-section" class="p-2 rounded-lg hover:bg-brick-red transition-colors duration-300">Products</a>
+                <a href="#contact-section" class="p-2 rounded-lg hover:bg-brick-red transition-colors duration-300">Contact</a>
             </div>
         </nav>
     </header>
@@ -53,12 +48,11 @@
     <main class="container mx-auto mt-8 p-4">
 
         <!-- Home Section -->
-        <section id="home-section" class="page-section active bg-white p-8 rounded-lg shadow-md mb-8">
+        <section id="home-section" class="bg-white p-8 rounded-lg shadow-md mb-8">
             <h2 class="text-4xl font-extrabold text-brick-red mb-4">Quality Bricks for Every Project</h2>
             <p class="text-lg text-gray-700 mb-6">
                 Welcome to Pawan Bricks Co., your trusted partner for high-quality, durable bricks. We provide a wide range of brick types for residential, commercial, and landscaping projects. Our commitment to excellence ensures that you get the best materials for a solid foundation.
             </p>
-            <!-- Corrected image URL to the raw file on GitHub -->
             <img src="https://raw.githubusercontent.com/Ankit-Upadhyay-IITM/PAWAN/main/Baba%20bhatta.jpg" alt="Brick wall background" class="w-full h-auto rounded-lg shadow-lg">
             <div class="mt-8 grid md:grid-cols-3 gap-6">
                 <div class="p-6 bg-clay rounded-lg shadow-inner">
@@ -77,52 +71,48 @@
         </section>
 
         <!-- Products Section -->
-        <section id="products-section" class="page-section bg-white p-8 rounded-lg shadow-md mb-8">
+        <section id="products-section" class="bg-white p-8 rounded-lg shadow-md mb-8">
             <h2 class="text-4xl font-extrabold text-brick-red mb-8 text-center">Our Product Catalog</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product Card 1 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <!-- Product Card 1 with a link to a new page -->
+                <a href="standard-red-brick.html" class="block bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/400x300/A84734/FFF?text=Standard+Brick" alt="Standard Red Brick" class="w-full h-48 object-cover rounded-md mb-4">
                     <h3 class="text-2xl font-semibold text-cement-gray mb-2">Standard Red Brick</h3>
-                    <p class="text-gray-600 mb-2">A classic and versatile choice for any construction project.</p>
-                    <p class="text-xl font-bold text-brick-red mb-4">Price: Rs. 10 per piece</p>
+                    <p class="text-gray-600 mb-4">A classic and versatile choice for any construction project.</p>
                     <span class="inline-block bg-brick-red text-white text-sm font-bold px-3 py-1 rounded-full">Classic</span>
-                </div>
-                <!-- Product Card 2 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                </a>
+                <!-- Product Card 2 with a link to a new page -->
+                <a href="gray-paver-brick.html" class="block bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/400x300/73838D/FFF?text=Gray+Paver" alt="Gray Paver Brick" class="w-full h-48 object-cover rounded-md mb-4">
                     <h3 class="text-2xl font-semibold text-cement-gray mb-2">Gray Paver Brick</h3>
-                    <p class="text-gray-600 mb-2">Ideal for driveways, patios, and walkways.</p>
-                    <p class="text-xl font-bold text-brick-red mb-4">Price: Rs. 12 per piece</p>
+                    <p class="text-gray-600 mb-4">Ideal for driveways, patios, and walkways. Its sleek, modern look complements contemporary designs.</p>
                     <span class="inline-block bg-cement-gray text-white text-sm font-bold px-3 py-1 rounded-full">Modern</span>
-                </div>
-                <!-- Product Card 3 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                </a>
+                <!-- Product Card 3 with a link to a new page -->
+                <a href="heritage-clay-brick.html" class="block bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/400x300/D2B48C/333?text=Heritage+Brick" alt="Heritage Clay Brick" class="w-full h-48 object-cover rounded-md mb-4">
                     <h3 class="text-2xl font-semibold text-cement-gray mb-2">Heritage Clay Brick</h3>
-                    <p class="text-gray-600 mb-2">Offers a rustic and traditional aesthetic.</p>
-                    <p class="text-xl font-bold text-brick-red mb-4">Price: Rs. 15 per piece</p>
+                    <p class="text-gray-600 mb-4">Offers a rustic and traditional aesthetic, perfect for creating a warm and historic feel.</p>
                     <span class="inline-block bg-clay text-gray-800 text-sm font-bold px-3 py-1 rounded-full">Rustic</span>
-                </div>
-                <!-- Product Card 4 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://placehold.co/400x300/6A5A4A/FFF?text=Brown+Brick" alt="Brown Bricks" class="w-full h-48 object-cover rounded-md mb-4">
+                </a>
+                <!-- Product Card 4 with a link to a new page -->
+                <a href="brown-stone-brick.html" class="block bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x300/6A5A4A/FFF?text=Brown+Brick" alt="Brown Stone Brick" class="w-full h-48 object-cover rounded-md mb-4">
                     <h3 class="text-2xl font-semibold text-cement-gray mb-2">Brown Stone Brick</h3>
-                    <p class="text-gray-600 mb-2">A rich, earthy color that adds a touch of elegance.</p>
-                    <p class="text-xl font-bold text-brick-red mb-4">Price: Rs. 14 per piece</p>
+                    <p class="text-gray-600 mb-4">A rich, earthy color that adds a touch of elegance and natural beauty to any facade.</p>
                     <span class="inline-block bg-zinc-700 text-white text-sm font-bold px-3 py-1 rounded-full">Earthy</span>
-                </div>
+                </a>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact-section" class="page-section bg-white p-8 rounded-lg shadow-md mb-8">
+        <section id="contact-section" class="bg-white p-8 rounded-lg shadow-md mb-8">
             <h2 class="text-4xl font-extrabold text-brick-red mb-4 text-center">Get in Touch</h2>
             <p class="text-center text-lg text-gray-600 mb-8">
                 Have a question or need a quote? You can contact us directly or fill out the form below.
             </p>
             <div class="max-w-xl mx-auto mb-8 text-center">
-                 <!-- You can easily change your contact details here -->
+                 <!-- Update your contact details here -->
                 <p class="text-lg font-semibold text-gray-800">
                     Phone: <a href="tel:+919876543210" class="text-blue-600 hover:underline">+91 98765 43210</a>
                 </p>
@@ -161,52 +151,32 @@
     <footer class="bg-cement-gray text-white p-4 text-center mt-8">
         <p>&copy; 2025 Pawan Bricks Co. All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript to handle page navigation and form submission -->
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pageSections = document.querySelectorAll('.page-section');
             const contactForm = document.getElementById('contactForm');
             const formMessage = document.getElementById('form-message');
-
-            // Function to show a specific page
-            const showPage = (targetId) => {
-                pageSections.forEach(section => {
-                    section.classList.remove('active');
+            
+            // This script is only for the form on the index page.
+            if (contactForm) {
+                 contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault(); // Prevent default form submission
+    
+                    const formData = new FormData(contactForm);
+                    const data = Object.fromEntries(formData.entries());
+    
+                    // Display a success message
+                    formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('text-green-600');
+    
+                    // Log the form data to the console for demonstration
+                    console.log('Form Data Submitted:', data);
+    
+                    // Clear the form fields
+                    contactForm.reset();
                 });
-                document.getElementById(targetId).classList.add('active');
-            };
-
-            // Event listeners for navigation links
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    const targetId = e.target.dataset.target;
-                    showPage(targetId);
-                });
-            });
-
-            // Initially show the home section
-            showPage('home-section');
-
-            // Handle form submission
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent default form submission
-
-                const formData = new FormData(contactForm);
-                const data = Object.fromEntries(formData.entries());
-
-                // Display a success message
-                formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
-                formMessage.classList.remove('hidden');
-                formMessage.classList.add('text-green-600');
-
-                // Log the form data to the console for demonstration
-                console.log('Form Data Submitted:', data);
-
-                // Clear the form fields
-                contactForm.reset();
-            });
+            }
         });
     </script>
 </body>
